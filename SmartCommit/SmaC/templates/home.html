@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <title>Smart Commit – AI Code Review</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,11 +15,12 @@
       padding: 0;
       box-sizing: border-box;
     }
+    
 
     body, html {
       height: 100%;
       font-family: 'Outfit', sans-serif;
-      background: linear-gradient(135deg, #2b1055, #7597de);
+      background: linear-gradient(135deg, #1957cb, #7597de);
       overflow: hidden;
     }
 
@@ -80,7 +82,7 @@
     }
 
     .btn {
-      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      background: linear-gradient(to right, #419dff, #441afc);
       color: white;
       padding: 14px 36px;
       border-radius: 30px;
@@ -88,13 +90,14 @@
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
-      box-shadow: 0 0 10px rgba(255, 75, 43, 0.5);
+      /* box-shadow: 0 0 10px rgba(255, 75, 43, 0.5); */
     }
 
     .btn:hover {
       transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 0 20px rgba(255, 75, 43, 0.8);
+      box-shadow: 0 0 20px rgba(50, 43, 255, 0.8);
     }
+
 
     footer {
       margin-top: 30px;
@@ -111,7 +114,8 @@
       <h1>💡 Smart Commit</h1>
       <p>Level up your development with instant, AI-powered code reviews. Fast, insightful, and built for developers like you.</p>
 
-      <button class="btn">Get Started</button>
+      <!-- <button class="btn">Get Started</button> -->
+      <a href="{% url 'terminal' %}" class="btn">Get Started</a>
 
       <footer>Built with 💜 by Team Smart Commit</footer>
     </div>

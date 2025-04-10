@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="csrf-token" content="{{ csrf_token }}">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor with Preview</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ext-language_tools.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.23.4/ace.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <link rel="stylesheet" href="../statics/style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <h1>SmartCommit</h1>
+    </header>
+
+    <div class="container">
+        <div class="left-window">
+            <div class="editor-controls">
+                <select id="language-select">
+                    <option value="c">C</option>
+                    <option value="cpp">C++</option>
+                    <option value="python">Python</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="php">PHP</option>
+                    <option value="csharp">C#</option>
+                </select>
+                <button id="review-btn">Review</button>
+            </div>
+            <!-- <textarea id="code-editor" placeholder="Write your code here..."></textarea> -->
+            <div id="code-editor" class="code-box"></div>
+           
+        </div>
+        <div class="right-window">
+            <div class="preview" id="preview">
+                Preview will appear here...
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'main.js' %}" defer></script>
+
+</body>
+</html>

@@ -16,8 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from SmaC.views import home
+from SmaC.views import home, terminal, ask_gemini
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
+    path('terminal/', terminal, name='terminal'),
+    path('ask-gemini/', ask_gemini, name='ask_gemini'),
 ]
